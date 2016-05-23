@@ -10,7 +10,7 @@
     ],
     "require": {
         "php": ">=5.5.9",
-        "jjsoft-ar/siges-ui" : "1.0.*",
+        "jjsoft-ar/siges-ui" : "dev-master",
         "pingpong/sky": "~2.1",
         "pingpong/modules": "~2.1",
         "pingpong/menus": "~2.1",
