@@ -16,8 +16,9 @@ class SigesCoreServiceProvider extends ServiceProvider
     protected $providers = [
         \Joselfonseca\LaravelApiTools\LaravelApiToolsServiceProvider::class,
         \Pingpong\Generators\GeneratorsServiceProvider::class,
-        \JJSoft\SigesUi\Providers\SigesUiServiceProvider::class,
+        \JJSoft\SigesUI\Providers\SigesUIServiceProvider::class,
         \Joselfonseca\LaravelTactician\Providers\LaravelTacticianServiceProvider::class,
+        \JJSoft\SigesCore\Providers\FieldsServiceProvider::class,
         \Styde\Html\HtmlServiceProvider::class,
         \Pingpong\Menus\MenusServiceProvider::class,
         \JJSoft\SigesCore\Providers\MenuServiceProvider::class,
@@ -27,13 +28,13 @@ class SigesCoreServiceProvider extends ServiceProvider
         \Baum\Providers\BaumServiceProvider::class,
         \Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
         \UxWeb\SweetAlert\SweetAlertServiceProvider::class,
-        \yajra\Datatables\DatatablesServiceProvider::class,
+        \Yajra\Datatables\DatatablesServiceProvider::class,
         \Joselfonseca\ImageManager\ImageManagerServiceProvider::class,
         \JJSoft\SigesCore\Providers\ViewComposersServiceProvider::class,
         \Maatwebsite\Excel\ExcelServiceProvider::class,
         \Prettus\Repository\Providers\RepositoryServiceProvider::class,
         \Fenos\Notifynder\NotifynderServiceProvider::class,
-        Elibyy\TCPDF\ServiceProvider::class,
+        \Elibyy\TCPDF\ServiceProvider::class,
 
     ];
 
@@ -44,6 +45,7 @@ class SigesCoreServiceProvider extends ServiceProvider
         'Debugbar' => \Barryvdh\Debugbar\Facade::class,
         'Uuid' => \Webpatser\Uuid\Uuid::class,
         'SweetAlert' => \UxWeb\SweetAlert\SweetAlert::class,
+        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
         'Excel' => \Maatwebsite\Excel\Facades\Excel::class,
         'Notifynder' => Fenos\Notifynder\Facades\Notifynder::class,
         'PDF' => Elibyy\TCPDF\Facades\TCPDF::class

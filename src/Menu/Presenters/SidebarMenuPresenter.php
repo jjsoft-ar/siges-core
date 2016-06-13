@@ -11,7 +11,7 @@ class SidebarMenuPresenter extends NavbarPresenter
      */
     public function getOpenTagWrapper()
     {
-        return PHP_EOL . '<ul class="sidebar-menu">' . PHP_EOL;
+        return PHP_EOL . '<ul class="nav side-menu">' . PHP_EOL;
     }
 
     /**
@@ -20,13 +20,9 @@ class SidebarMenuPresenter extends NavbarPresenter
     public function getMenuWithDropDownWrapper($item)
     {
         return '
-      		<li class="treeview' . $this->getActiveStateOnChild($item, ' active') . '">
-                <a href="#">
-                    ' . $item->getIcon() . '
-                    <span>' . $item->title . '</span>
-                    <i class="fa fa-angle-left pull-right"></i>
-                </a>
-                <ul class="treeview-menu">
+            <li ' . $this->getActiveStateOnChild($item, ' active') . '>
+                <a>' . $item->getIcon() . ' ' . $item->title . ' <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
                     ' . $this->getChildMenuItems($item) . '
                 </ul>
             </li>';
@@ -37,7 +33,7 @@ class SidebarMenuPresenter extends NavbarPresenter
      */
     public function getMenuWithoutDropdownWrapper($item)
     {
-        return '<li'.$this->getActiveState($item).'><a href="'.$item->getUrl().'" '.$item->getAttributes().'>'.$item->getIcon().' <span>'.$item->title.'</span></a></li>'.PHP_EOL;
+        return '<li '.$this->getActiveState($item).'><a href="'.$item->getUrl().'" '.$item->getAttributes().'>'.$item->getIcon().' '.$item->title.' </a></li>'.PHP_EOL;
     }
 
     /**
